@@ -120,10 +120,6 @@ void loop() {
       sendMailOnFall(recipientEmail1);
       sendMailOnFall(recipientEmail2);
       sendMailOnFall(recipientEmail3);*/
-      // Send message to Discord (example)
-      postJsonData("https://discordapp.com/api/channels/Channle_ID/messages", "{\"content\": \"Fall detected!\"}");
-      postJsonData("https://discordapp.com/api/channels/Channel_ID/messages", "{\"content\": \"Fall detected!\"}");
-      //postJsonData("https://discordapp.com/api/channels//messages", "{\"content\": \"Fall detected!\"}");
     }
 
     if (validHeartRate && (heartRate < LOW_BPM || heartRate > HIGH_BPM)) {
@@ -255,23 +251,4 @@ void print_wakeup_reason() {
     case ESP_SLEEP_WAKEUP_ULP: Serial.println("Wakeup: ULP"); break;
     default: Serial.println("Wakeup: first boot"); break;
   }
-}
-
-
-void postJsonData(const char* serverUrl, const String& jsonPayload) {
-  if (WiFi.status() != WL_CONNECTED){ Serial.println("WiFi not connected"); return; }
-  HTTPClient http;
-  http.begin(serverUrl);
-  http.addHeader("Content-Type", "application/json");
-  http.addHeader("Accept", "application/json");
-  http.addHeader("Authorization", ""); // replace with real token
-  int httpResponseCode = http.POST(jsonPayload);
-  if (httpResponseCode>0) {
-    String response=http.getString();
-    Serial.print("POST Response: "); Serial.println(httpResponseCode);
-    Serial.print("Response: "); Serial.println(response);
-  } else {
-    Serial.print("HTTP POST failed: "); Serial.println(httpResponseCode);
-  }
-  http.end();
 }
