@@ -7,20 +7,20 @@ SAKETH S 22BCT0266 --> Software and Dev
 
 ---
 
-# 🩺 Smart Wearable Elderly Care & Health Monitoring System  
+# Smart Wearable Elderly Care & Health Monitoring System  
 
 A compact IoT-based wearable that continuously monitors **heart rate**, **SpO₂**, and **motion (fall detection)**.  
 Built using the **ESP32-WROOM-32 N8R8**, integrating sensors, cloud support, and intelligent alerts for elderly safety.
 
 ---
 
-## 📘 Overview
+## Overview
 This wearable monitors vital signs and movement to detect abnormal heart activity, low oxygen levels, or sudden motion (falls).  
 Data is sent wirelessly for cloud logging and remote caregiver alerts.
 
 ---
 
-## ⚙️ Hardware Components
+## Hardware Components
 
 | Component | Description | Purpose |
 |------------|-------------|----------|
@@ -36,7 +36,7 @@ Data is sent wirelessly for cloud logging and remote caregiver alerts.
 
 ---
 
-## 🧠 Software Requirements
+## Software Requirements
 
 | Software | Purpose |
 |-----------|----------|
@@ -51,7 +51,7 @@ Data is sent wirelessly for cloud logging and remote caregiver alerts.
 
 ---
 
-## 🧩 Wiring Summary
+## Wiring Summary
 
 | ESP32 Pin | Connect To | Function |
 |------------|-------------|----------|
@@ -66,14 +66,14 @@ Data is sent wirelessly for cloud logging and remote caregiver alerts.
 
 ---
 
-## 🔋 Power Chain
+## Power Chain
 - 100 µF between TP4056 OUT+ and OUT–  
 - 10 µF between ESP32 3.3 V and GND  
 - 0.1 µF near sensor VCC–GND  
 
 ---
 
-## 🧠 Features
+## Features
 - Real-time heart-rate & SpO₂ monitoring  
 - Fall detection via MPU6050  
 - Wireless Wi-Fi/BLE data transfer  
@@ -82,7 +82,7 @@ Data is sent wirelessly for cloud logging and remote caregiver alerts.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 1. Open **Arduino IDE** → add  
    `https://dl.espressif.com/dl/package_esp32_index.json` to *Additional Boards Manager URLs*.  
 2. Install **ESP32 by Espressif Systems**.  
@@ -92,15 +92,8 @@ Data is sent wirelessly for cloud logging and remote caregiver alerts.
 
 ---
 
-## 🧪 Cloud Integration and Testing (Upcoming)
+## Cloud Integration and Testing (Upcoming)
 Cloud data logging and dashboard visualization to be added using MQTT or REST APIs.
 
 ---
 
-
-## 📄 License
-Licensed under the MIT License — free for educational and research use.
-
----
-
-⭐ If you found this useful, please star the repository!
